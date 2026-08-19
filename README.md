@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# New IE Website
 
-## Getting Started
+This repository's main focus is the development of the new kfupm intellectual
+and electronics sports club's website.
 
-First, run the development server:
+We're making a new one since the technical debt of the first one got a bit
+too... costly! (and a few other reasons you should join us if you're interested
+in finding out :D)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is a [Next.js](https://nextjs.org) project with typescript, standard rules
+*tend* to apply.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We're still (re-)figuring stuff out so most of this is very temporary!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Please** go through the proper procedure of making a PR even if you have
+write access to the repo.
 
-## Learn More
+## ΑΙ?
 
-To learn more about Next.js, take a look at the following resources:
+A main goal of everything we do as a club is to learn things so I (@enokiun)
+would strongly discourage the usage of AI *especially* if you are not
+exeprienced with the tools used and so on but I will not stop you from making a
+pull request with a bunch of ai-generated code since it'll be scrutinised
+anyway before merging.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+However, if two people would like to work on the same thing and one of them
+would take the AI route then I would greatly appreciate it if the task is given
+to  whomever would learn more from it.
