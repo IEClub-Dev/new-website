@@ -28,3 +28,6 @@ anyway before merging.
 However, if two people would like to work on the same thing and one of them
 would take the AI route then I would greatly appreciate it if the task is given
 to  whomever would learn more from it.
+
+the prograss so far
+<img width="1470" height="928" alt="Screenshot 2026-08-21 at 9 52 07 PM" src="https://github.com/user-attachments/assets/9102b8c1-45a8-4779-b037-caf62717e5a5" />
