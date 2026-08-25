@@ -24,6 +24,34 @@ export default function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   const quickLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -37,22 +65,22 @@ export default function NavBar() {
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div className="relative border-b border-[var(--theme-border)] bg-[var(--theme-card)]/90 px-5 shadow-sm backdrop-blur-sm">
-        <div className="relative flex h-20 items-center justify-between">
-          <div className="flex items-center gap-4">
+      <div className="relative border-b border-[var(--theme-border)] bg-[var(--theme-card)]/90 px-4 shadow-sm backdrop-blur-sm sm:px-5">
+        <div className="relative flex h-20 items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-4">
             <Image
               src="/ie-Logo-Dark.png"
               alt="IE Club logo"
-              width={54}
-              height={54}
+              width={48}
+              height={48}
               priority
-              className="object-contain"
+              className="h-12 w-12 object-contain sm:h-[54px] sm:w-[54px]"
             />
-            <div className="leading-none">
-              <div className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[var(--theme-text-main)] opacity-60">
+            <div className="min-w-0 leading-none">
+              <div className="truncate text-[9px] font-semibold uppercase tracking-[0.24em] text-[var(--theme-text-main)] opacity-60 sm:text-[10px] sm:tracking-[0.35em]">
                 KFUPM
               </div>
-              <div className="mt-1 text-lg font-black uppercase tracking-[0.2em] text-[var(--theme-text-main)]">
+              <div className="mt-1 truncate text-sm font-black uppercase tracking-[0.12em] text-[var(--theme-text-main)] sm:text-lg sm:tracking-[0.2em]">
                 IE Club
               </div>
             </div>
@@ -81,8 +109,9 @@ export default function NavBar() {
             type="button"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--theme-border)] bg-[var(--theme-foreground)]/80 text-[var(--theme-text-main)] transition-all hover:scale-105 md:hidden"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--theme-border)] bg-[var(--theme-foreground)]/80 text-[var(--theme-text-main)] transition-all hover:scale-105 md:hidden"
           >
             <span className="flex flex-col gap-1.5">
               <span
@@ -104,26 +133,40 @@ export default function NavBar() {
           </button>
         </div>
 
-        {isMenuOpen && (
-          <div className="border-t border-[var(--theme-border)] bg-[var(--theme-card)]/95 px-3 py-3 md:hidden">
-            <nav
-              aria-label="Mobile navigation"
-              className="flex flex-col gap-2 text-sm font-medium uppercase tracking-[0.18em] text-[var(--theme-text-main)]"
-            >
-              {quickLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="rounded-xl px-3 py-2 transition-all duration-300 hover:bg-[var(--color-ie-red)]/10 hover:text-[var(--color-ie-red)]"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
+        <div
+          className={`absolute left-0 right-0 top-full border-b border-[var(--theme-border)] bg-[var(--theme-card)]/95 px-3 py-3 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden ${
+            isMenuOpen
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-2 opacity-0"
+          }`}
+        >
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            className="flex flex-col gap-2 text-sm font-medium uppercase tracking-[0.16em] text-[var(--theme-text-main)]"
+          >
+            {quickLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="rounded-xl px-3 py-2.5 transition-all duration-300 hover:bg-[var(--color-ie-red)]/10 hover:text-[var(--color-ie-red)]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
       </div>
+
+      <button
+        type="button"
+        aria-label="Close mobile menu"
+        onClick={() => setIsMenuOpen(false)}
+        className={`fixed inset-0 z-[-1] bg-black/30 transition-opacity duration-300 md:hidden ${
+          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
     </nav>
   );
 }
