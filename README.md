@@ -31,3 +31,5 @@ to  whomever would learn more from it.
 
 the prograss so far
 <img width="1470" height="928" alt="Screenshot 2026-08-21 at 9 52 07 PM" src="https://github.com/user-attachments/assets/9102b8c1-45a8-4779-b037-caf62717e5a5" />
+<img width="397" height="847" alt="Screenshot 2026-08-25 at 6 27 13 PM" src="https://github.com/user-attachments/assets/c0077255-c0b0-4060-abbd-07e236dcc616" />
+
