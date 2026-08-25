@@ -15,7 +15,7 @@ function SocialIcon({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--theme-border)] bg-[var(--theme-foreground)] text-[var(--theme-text-main)] transition-opacity hover:opacity-80"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border-default)] bg-[var(--color-foreground)] text-[var(--color-text-main)] transition-all duration-300 hover:border-[var(--color-ie-red-hover)] hover:text-[var(--color-ie-red-hover)] hover:opacity-80"
     >
       {children}
     </a>
@@ -26,7 +26,7 @@ export default function Footer() {
   
 
   return (
-    <footer className="border-t border-[var(--theme-border)] bg-[var(--theme-card)] px-6 py-5 backdrop-blur-sm">
+    <footer className="border-t border-[var(--color-border-default)] bg-[var(--color-card)] px-6 py-5 backdrop-blur-sm">
       <div className="mx-auto max-w-6xl space-y-4">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="flex items-center gap-3 opacity-75">
@@ -39,10 +39,10 @@ export default function Footer() {
               priority
             />
             <div className="leading-none">
-              <div className="text-[9px] font-semibold uppercase tracking-[0.35em] text-[var(--theme-text-main)] opacity-60">
+              <div className="text-[9px] font-semibold uppercase tracking-[0.35em] text-[var(--color-text-main)] opacity-60">
                 KFUPM
               </div>
-              <div className="mt-1 text-base font-black uppercase tracking-[0.2em] text-[var(--theme-text-main)]">
+              <div className="mt-1 text-base font-black uppercase tracking-[0.2em] text-[var(--color-text-main)]">
                 IE Club
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           
 
-          <div className="flex items-center gap-3 text-[var(--theme-text-main)] opacity-75">
+          <div className="flex items-center gap-3 text-[var(--color-text-main)] opacity-75">
             <SocialIcon href="https://www.instagram.com/ieclub_kfupm" label="Instagram">
               <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
                 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5-3.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17 6.25Z" />
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-2 border-t border-[var(--theme-border)] pt-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--theme-text-main)] opacity-60 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-2 border-t border-[var(--color-border-default)] pt-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-main)] opacity-60 sm:flex-row">
           <span>© 2026 IE Club</span>
           <span>Built for KFUPM</span>
         </div>
