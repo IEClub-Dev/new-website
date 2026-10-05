@@ -46,7 +46,8 @@
 
 body {
   background: var(--color-background);
-  color: var(--color-foreground);
+  color: var(--color-text-main);
   /* TODO: address readex and get like an actual font */
   font-family: Readex Pro, system-ui, Inter, sans-serif;
+  background-image: url('/pattern-tile-extended.svg')
 }
