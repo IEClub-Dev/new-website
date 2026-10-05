@@ -128,8 +128,7 @@ export default function NavBar() {
             const isCurrentPage = isLinkActive(link.href);
 
             // Hide the current-page appearance while any link is hovered.
-            const showActiveTheme =
-              isCurrentPage && hoveredLink === null;
+            const showActiveTheme = isCurrentPage && hoveredLink === null;
 
             return (
               <a
@@ -259,3 +258,4 @@ export default function NavBar() {
     </header>
   );
 }
+
