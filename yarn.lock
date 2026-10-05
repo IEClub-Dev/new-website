@@ -551,6 +551,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.3.1.tgz#5789a9ced66481e68cb2d0975360ed2943cd7033"
   integrity sha512-d/k+PpAriUPaeMJJOG7HUSdqfEX46FEPWU1p3/nm2ACmXhj9hFEWdFODUBIpkuijXYkfL90qZzTqVPRp4BW/hw==
 
+"@nine-thirty-five/material-symbols-react@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@nine-thirty-five/material-symbols-react/-/material-symbols-react-2.3.0.tgz#4a369ac84b4a8142d9c5df97260e8ef1e38e7639"
+  integrity sha512-0aW+tJ2dzN7UiG2F8I336p/80tKDURLGH63Qf5a6gjUfYqVWfA7TaKsFdHWHyTE4ltLq1RrP+tGQXW0nPp0HXA==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
