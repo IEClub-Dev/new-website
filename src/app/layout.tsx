@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "../components/layout/NavBar.tsx";
-import Footer from "../components/layout/Footer.tsx";
+import NavBar from "@/components/layout/NavBar.tsx";
+import Footer from "@/components/layout/Footer.tsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,21 +19,19 @@ export const metadata: Metadata = {
   description: "KFUPM's Intellectual and Electronic Sports Club",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
-    <>
-      <NavBar />
-      <html
-        lang="en"
-        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      >
-        <body className="min-h-full flex flex-col">
-          <main>
-            {children}
-          </main>
-        </body>
-      </html>
-      <Footer />
-    </>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col pt-20">
+        <NavBar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
+    </html>
   );
 }

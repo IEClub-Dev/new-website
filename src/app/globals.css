@@ -43,7 +43,6 @@
   --color-error: var(--color-ie-red); /* Error red */
 }
 
-
 body {
   background: var(--color-background);
   color: var(--color-text-main);

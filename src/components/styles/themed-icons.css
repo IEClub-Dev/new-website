@@ -1,0 +1,25 @@
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .logo-light {
+    display: none;
+  }
+
+  html:not(.light) .logo-dark {
+    display: block;
+  }
+}
