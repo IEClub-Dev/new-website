@@ -1,31 +1,5 @@
 @import "tailwindcss";
 
-.logo-light {
-  display: block;
-}
-
-.logo-dark {
-  display: none;
-}
-
-html.dark .logo-light {
-  display: none;
-}
-
-html.dark .logo-dark {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  html:not(.light) .logo-light {
-    display: none;
-  }
-
-  html:not(.light) .logo-dark {
-    display: block;
-  }
-}
-
 :root {
   /* Light theme colors */
   --theme-background: #f3faff; /* Light background */
@@ -47,14 +21,6 @@ html.dark .logo-dark {
     --theme-border: rgba(75, 85, 99, 0.6); /* Dark border */
     --theme-card: rgba(42, 42, 42, 0.9); /* Dark card background */
     --theme-input: #3f3f46; /* Dark input background */
-  }
-
-  html:not(.light) .logo-light {
-    display: none;
-  }
-
-  html:not(.light) .logo-dark {
-    display: block;
   }
 }
 

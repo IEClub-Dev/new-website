@@ -1,5 +1,7 @@
 "use client";
 
+import "@/components/styles/themed-icons.css"; // we do not really need to import this since the footer already does it but it's good to at least mention it here
+
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -258,4 +260,3 @@ export default function NavBar() {
     </header>
   );
 }
-

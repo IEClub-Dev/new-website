@@ -1,0 +1,46 @@
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light) .logo-light {
+    display: none;
+  }
+
+  html:not(.light) .logo-dark {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme colors */
+    --theme-background: #353535; /* Dark background */
+    --theme-foreground: #2a2a2a; /* Dark foreground */
+    --theme-text-main: #f1f5f9; /* Dark primary text */
+    --theme-text-secondary: #9ca3af; /* Dark secondary text */
+    --theme-border: rgba(75, 85, 99, 0.6); /* Dark border */
+    --theme-card: rgba(42, 42, 42, 0.9); /* Dark card background */
+    --theme-input: #3f3f46; /* Dark input background */
+  }
+
+  html:not(.light) .logo-light {
+    display: none;
+  }
+
+  html:not(.light) .logo-dark {
+    display: block;
+  }
+}

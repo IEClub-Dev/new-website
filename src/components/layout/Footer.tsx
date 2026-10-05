@@ -1,3 +1,4 @@
+import "@/components/styles/themed-icons.css";
 import Image from "next/image";
 
 // TODO: somehow clean this up (SVGR then put the SVGs into /components/SVGs and import them?)
