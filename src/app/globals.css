@@ -43,10 +43,8 @@
   --color-error: var(--color-ie-red); /* Error red */
 }
 
-
 body {
   background: var(--color-background);
   color: var(--color-foreground);
-  /* TODO: address readex and get like an actual font */
   font-family: Readex Pro, system-ui, Inter, sans-serif;
 }
