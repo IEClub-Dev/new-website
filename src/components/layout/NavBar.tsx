@@ -130,7 +130,7 @@ export default function NavBar() {
             const isCurrentPage = isLinkActive(link.href);
 
             // Hide the current-page appearance while any link is hovered.
-            const showActiveTheme = isCurrentPage && hoveredLink === null;
+            const showActiveLink = isCurrentPage && hoveredLink === null;
 
             return (
               <a
@@ -144,14 +144,14 @@ export default function NavBar() {
                 <span
                   aria-hidden="true"
                   className={`absolute inset-0 rounded-full bg-[var(--color-ie-red)]/10 blur-sm transition-all duration-300 ease-out group-hover:opacity-100 group-hover:shadow-[0_0_16px_rgba(179,50,50,0.55)] ${
-                    showActiveTheme ? "opacity-100" : "opacity-0"
+                    showActiveLink ? "opacity-100" : "opacity-0"
                   }`}
                 />
 
                 {/* Link text */}
                 <span
                   className={`relative z-10 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-[1.06] group-hover:text-[var(--color-ie-red-hover)] ${
-                    showActiveTheme
+                    showActiveLink
                       ? "text-[var(--color-ie-red)]"
                       : "text-[var(--color-text-main)]"
                   }`}
@@ -163,7 +163,7 @@ export default function NavBar() {
                 <span
                   aria-hidden="true"
                   className={`absolute inset-x-1 -bottom-1 h-0.5 origin-left rounded-full bg-[var(--color-ie-red)] shadow-[0_0_10px_rgba(179,50,50,0.9)] transition-transform duration-300 ease-out group-hover:scale-x-100 ${
-                    showActiveTheme ? "scale-x-100" : "scale-x-0"
+                    showActiveLink ? "scale-x-100" : "scale-x-0"
                   }`}
                 />
               </a>
@@ -216,7 +216,7 @@ export default function NavBar() {
           >
             {quickLinks.map((link) => {
               const isCurrentPage = isLinkActive(link.href);
-              const showActiveTheme = isCurrentPage && hoveredLink === null;
+              const showActiveLink = isCurrentPage && hoveredLink === null;
 
               return (
                 <a
@@ -231,13 +231,13 @@ export default function NavBar() {
                   <span
                     aria-hidden="true"
                     className={`absolute inset-0 rounded-full bg-[var(--color-ie-red)]/10 blur-sm transition-all duration-300 ease-out group-hover:opacity-100 group-hover:shadow-[0_0_16px_rgba(179,50,50,0.55)] ${
-                      showActiveTheme ? "opacity-100" : "opacity-0"
+                      showActiveLink ? "opacity-100" : "opacity-0"
                     }`}
                   />
 
                   <span
                     className={`relative z-10 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-[1.04] group-hover:text-[var(--color-ie-red-hover)] ${
-                      showActiveTheme
+                      showActiveLink
                         ? "text-[var(--color-ie-red)]"
                         : "text-[var(--color-text-main)]"
                     }`}
@@ -248,7 +248,7 @@ export default function NavBar() {
                   <span
                     aria-hidden="true"
                     className={`absolute inset-x-1 -bottom-1 h-0.5 origin-left rounded-full bg-[var(--color-ie-red)] shadow-[0_0_10px_rgba(179,50,50,0.9)] transition-transform duration-300 ease-out group-hover:scale-x-100 ${
-                      showActiveTheme ? "scale-x-100" : "scale-x-0"
+                      showActiveLink ? "scale-x-100" : "scale-x-0"
                     }`}
                   />
                 </a>
